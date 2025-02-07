@@ -1,0 +1,17 @@
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Compiled files
+*.class
+bin/
+out/
+
+# Package files
+*.jar
+*.war
+
+# OS files
+.DS_Store
+Thumbs.db
