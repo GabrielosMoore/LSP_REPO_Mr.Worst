@@ -1,0 +1,64 @@
+Library System CRC Cards
+=======================
+
+Class: Book
+-----------
+Description:
+- Represents individual books in the library collection
+- Essential for tracking each physical book copy and its status
+
+Responsibilities:
+- Store book information (title, author, ISBN)
+- Track availability status (available/checked out)
+
+Collaborators:
+- Library (manages the book in its collection)
+- Member (borrows/returns the book)
+
+
+Class: Member
+------------
+Description:
+- Represents library patrons who can borrow books
+- Needed to track borrowing limits and book possession
+
+Responsibilities:
+- Track currently borrowed books (max 3)
+- Handle borrowing and returning books
+
+Collaborators:
+- Book (items being borrowed/returned)
+- Library (processes lending transactions)
+
+
+Class: Librarian
+---------------
+Description:
+- Represents staff members who manage the library
+- Required for administrative operations and oversight
+
+Responsibilities:
+- Manage book collection (add/remove books)
+- View book status and borrower information
+
+Collaborators:
+- Library (administers the system)
+- Book (manages the collection)
+- Member (monitors borrowing activities)
+
+
+Class: Library
+-------------
+Description:
+- Central system that manages the entire library operation
+- Coordinates all interactions between books, members, and staff
+
+Responsibilities:
+- Maintain the book collection
+- Process lending transactions
+- Track book-member relationships
+
+Collaborators:
+- Book (manages collection items)
+- Member (handles lending operations)
+- Librarian (provides administrative access) 
