@@ -1,0 +1,84 @@
+Library System CRC Analysis
+
+Part 1: Class Identification
+=========================
+
+1. Book Class
+------------
+Why needed:
+- Represents individual books with their properties (title, author, ISBN, availability)
+- Core entity that the library manages
+
+2. Member Class
+--------------
+Why needed:
+- Represents library members who can borrow books
+- Needed to track borrowed books and enforce borrowing limits
+
+3. Library Class
+---------------
+Why needed:
+- Central class managing the book collection and member interactions
+- Needed to coordinate book lending and track overall system state
+
+4. Librarian Class
+-----------------
+Why needed:
+- Represents staff with administrative privileges
+- Needed to manage book collection and oversee lending operations
+
+
+Part 2: Class Responsibilities
+===========================
+
+Book Class:
+----------
+- Store and provide access to book information (title, author, ISBN)
+- Track and update availability status
+
+Member Class:
+------------
+- Maintain list of currently borrowed books
+- Handle borrowing and returning of books
+- Track number of books borrowed (limit of 3)
+
+Library Class:
+-------------
+- Maintain collection of all books
+- Process book lending and returns
+- Track overall availability of books
+
+Librarian Class:
+---------------
+- Add and remove books from collection
+- View system status and borrowed books
+- Monitor member borrowing activities
+
+
+Part 3: Class Collaborators
+=========================
+
+Book Class collaborates with:
+---------------------------
+- Library (for collection management)
+- Member (for borrowing status)
+Reason: Books need to interact with the Library for management and Members for lending operations
+
+Member Class collaborates with:
+-----------------------------
+- Book (to borrow and return)
+- Library (to access collection)
+Reason: Members need to interact with Books they borrow and the Library to access the collection
+
+Library Class collaborates with:
+------------------------------
+- Book (to manage collection)
+- Member (to process loans)
+- Librarian (for administrative tasks)
+Reason: Library acts as the central system connecting all other components
+
+Librarian Class collaborates with:
+--------------------------------
+- Library (to manage system)
+- Book (to modify collection)
+Reason: Librarians need access to both the Library system and Books to perform their administrative duties 

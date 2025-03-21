@@ -1,8 +1,5 @@
 package org.howard.edu.lsp.midterm.question3;
 
-/**
- * Test driver for VotingMachine implementation
- */
 public class VotingMachineTest {
     public static void main(String[] args) {
         VotingMachine vm = new VotingMachine();
@@ -20,11 +17,11 @@ public class VotingMachineTest {
         vm.castVote("Charlie");
         vm.castVote("Charlie");
         
-        // Attempt to vote for non-existent candidate
+        // Attempt to vote for a non-existent candidate
         boolean success = vm.castVote("Eve");
         System.out.println("Vote for Eve successful? " + success);
 
-        // Display results
+        // Displaying results
         System.out.println("Winner: " + vm.getWinner());
     }
 } 

@@ -1,8 +1,5 @@
 package org.howard.edu.lsp.midterm.question5;
 
-/**
- * Driver class to test streaming service implementation
- */
 public class StreamingServiceDriver {
     public static void main(String[] args) {
         // Create instances of different media types
@@ -18,13 +15,13 @@ public class StreamingServiceDriver {
         music.pause();
         music.stop();
         System.out.println();
-        
+
         System.out.println("Testing Movie:");
         movie.play();
         movie.pause();
         movie.stop();
         System.out.println();
-        
+
         System.out.println("Testing Audiobook:");
         audiobook.play();
         audiobook.pause();

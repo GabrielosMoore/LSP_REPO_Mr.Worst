@@ -2,42 +2,36 @@ package org.howard.edu.lsp.midterm.question3;
 
 import java.util.*;
 
-/**
- * Implements a simple electronic voting machine
- */
 public class VotingMachine {
-    private Map<String, Integer> votes;
-    private Set<String> candidates;
-    
-    public VotingMachine() {
-        votes = new HashMap<>();
-        candidates = new HashSet<>();
-    }
-    
+    private Map<String, Integer> votes = new HashMap<>();
+
     public void addCandidate(String name) {
-        candidates.add(name);
-        votes.put(name, 0);
+        votes.putIfAbsent(name, 0);
     }
-    
-    public boolean castVote(String candidate) {
-        if (!candidates.contains(candidate)) {
+
+    public boolean castVote(String name) {
+        if (!votes.containsKey(name)) {
             return false;
         }
-        votes.put(candidate, votes.get(candidate) + 1);
+        votes.put(name, votes.get(name) + 1);
         return true;
     }
-    
+
     public String getWinner() {
+        if (votes.isEmpty()) {
+            return "No candidates";
+        }
+
         String winner = null;
         int maxVotes = -1;
-        
+
         for (Map.Entry<String, Integer> entry : votes.entrySet()) {
             if (entry.getValue() > maxVotes) {
                 maxVotes = entry.getValue();
                 winner = entry.getKey();
             }
         }
-        
+
         return winner + " WINS with " + maxVotes + " votes!!";
     }
 } 

@@ -2,9 +2,6 @@ package org.howard.edu.lsp.midterm.question4;
 
 import java.util.List;
 
-/**
- * Driver class to test WordProcessor implementation
- */
 public class WordProcessorDriver {
     public static void main(String[] args) {
         // Test case 1: Sentence with single longest word
@@ -12,7 +9,7 @@ public class WordProcessorDriver {
         List<String> longestWords4 = wp4.findLongestWords();
         System.out.println("Test 4 - Longest words: " + longestWords4);
 
-        // Test case 2: Sentence with multiple occurrences of same longest word
+        // Test case 2: Sentence with multiple occurrences of the same longest word
         WordProcessor wp2 = new WordProcessor("Java is a powerful  tool");
         List<String> longestWords2 = wp2.findLongestWords();
         System.out.println("Test 2 - Longest words: " + longestWords2);
