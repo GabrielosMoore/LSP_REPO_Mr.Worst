@@ -5,11 +5,19 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * References:
+ * - Java ArrayList documentation: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+ * - Set Operations: https://www.mathsisfun.com/sets/sets-introduction.html
+ * - Java Collections utility class: https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html
+ * - JavaDoc guidelines: https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
+ */
+
+/**
  * IntegerSet class implements a set of integers with various set operations.
  * This class provides functionality for managing a set of integers including
  * basic set operations like union, intersection, and complement.
  * 
- * @author Your Name
+ * @author Gabriel Moore
  * @version 1.0
  * @since 2024-03-01
  */
